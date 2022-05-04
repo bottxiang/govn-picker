@@ -1,0 +1,30 @@
+body {
+  background-color: rgb(62, 75, 84);
+  color: rgb(255, 214, 5);
+  width: 150px;
+}
+
+button {
+  /* height: 30px;
+  width: 30px; */
+  outline: none;
+  margin: 5px;
+  border: none;
+  border-radius: 2px;
+  color: rgb(221, 196, 71);
+  background-color: rgb(34, 41, 46);
+}
+
+button:hover {
+  color: rgb(255, 214, 5);
+  background-color: rgb(36, 44, 48);
+}
+
+button.current {
+  box-shadow: 0 0 0 2px white,
+              0 0 0 4px rgb(66, 75, 128);
+}
+
+p#link {
+  font-size: 0.5em;
+}

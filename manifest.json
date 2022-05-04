@@ -1,0 +1,48 @@
+{
+  "name": "GOVN Picker",
+  "description": "Pick a Vietnamese word and lookup it in Vietnamese online dictionary(https://d.woohsi.top). Contact: woohsi.top@gmail.com",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/logo16.png",
+      "32": "/images/logo32.png",
+      "48": "/images/logo48.png",
+      "128": "/images/logo128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/logo16.png",
+    "32": "/images/logo32.png",
+    "48": "/images/logo48.png",
+    "128": "/images/logo128.png"
+  },
+  "options_page": "options.html",
+  "commands": {
+    "run-foo": {
+      "suggested_key": {
+        "default": "Ctrl+D",
+        "mac": "MacCtrl+D"
+      },
+      "description": "Run \"foo\" on the current page."
+    },
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "MacCtrl+Shift+F"
+      },
+      "description": "Opens popup.html"
+    }
+  }
+}
