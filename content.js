@@ -13,8 +13,9 @@
 
 document.addEventListener("keydown", (e) => {
   //console.log(e);
-  if ((e.ctrlKey || e.key=='Meta') && e.key === 'd') {
-    console.log("Ctrl/Command+d");
+  if ((e.ctrlKey || e.metaKey) && e.key === 'd') {
+    e.preventDefault();
+    e.stopPropagation();
     var selection = window.getSelection().toString();
     chrome.runtime.sendMessage({
       title: document.title,
